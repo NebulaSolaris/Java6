@@ -1,0 +1,155 @@
+﻿OBS: O computador estava com problema na hora de tirar prints, e tivemos que copiar o código.
+
+
+
+
+Desafio 01
+package tema06;
+
+
+public class DesafioSomaVetor {
+    public static void main(String[] args) {
+        // Declarando e inicializando o vetor
+        int[] numeros = {15, 207, 60, 46, 79};
+        int soma = 0;
+
+
+        // Percorrendo o vetor com for
+        for (int i = 0; i < numeros.length; i++) {
+            soma += numeros[i];
+        }
+
+
+        System.out.println("Soma: " + soma);
+    }
+}
+
+
+Desafio 02
+package tema06;
+public class DesafioNotas {
+    public static void main(String[] args) {
+        // Declarando e inicializando o vetor de notas
+        double[] notas = {7.5, 8.0, 6.5, 9.0, 8.5, 7.0};
+        double soma = 0;
+        int acimaMedia = 0;
+
+
+        // Calculando a soma
+        for (double nota : notas) {
+            soma += nota;
+        }
+
+
+        // Calculando a média
+        double media = soma / notas.length;
+        System.out.println("Média: " + media);
+
+
+        // Contando notas acima da média
+        for (double nota : notas) {
+            if (nota > media) {
+                acimaMedia++;
+            }
+        }
+
+
+        System.out.println("Notas acima da média: " + acimaMedia);
+    }
+}
+
+
+Desafio 03
+package tema06;
+public class DesafioMatriz {
+    public static void main(String[] args) {
+        // Declarando e inicializando a matriz 3x3
+        int[][] matriz = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+
+        System.out.println("Matriz:");
+        // Percorrendo a matriz
+        for (int i = 0; i < matriz.length; i++) {
+            int soma = 0;
+
+
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.print(matriz[i][j] + " ");
+                soma += matriz[i][j];
+            }
+
+
+            System.out.println(" → Soma: " + soma);
+        }
+    }
+}
+
+
+Desafio 04
+package tema06;
+public class DesafioTemperatura {
+    public static void main(String[] args) {
+        // Declarando e inicializando o vetor de temperaturas
+        double[] temperaturas = {23.5, 25.0, 16.5, 30.0, 22.0, 24.5, 26.0};
+        double soma = 0;
+        double maior = temperaturas[0];
+        double menor = temperaturas[0];
+
+
+        // Percorrendo o vetor
+        for (double temp : temperaturas) {
+            soma += temp;
+
+
+            if (temp > maior) {
+                maior = temp;
+            }
+
+
+            if (temp < menor) {
+                menor = temp;
+            }
+        }
+
+
+        double media = soma / temperaturas.length;
+
+
+        System.out.println("Maior temperatura: " + maior);
+        System.out.println("Menor temperatura: " + menor);
+        System.out.printf("Média: %.2f\n", media);
+    }
+}
+
+
+Desafio 05
+package tema06;
+public class DesafioTabuada {
+    public static void main(String[] args) {
+        // Declarando a matriz 15x15
+        int[][] tabuada = new int[15][15];
+
+
+        // Preenchendo a matriz com a tabuada
+        for (int i = 0; i < 15; i++) {
+            for (int j = 0; j < 15; j++) {
+                tabuada[i][j] = (i + 1) * (j + 1);
+            }
+        }
+
+
+        // Exibindo a matriz formatada
+        System.out.println("TABUADA 1 a 15:\n");
+        for (int i = 0; i < 15; i++) {
+            for (int j = 0; j < 15; j++) {
+                // Formatação para alinhar os números
+                System.out.printf("%4d", tabuada[i][j]);
+            }
+            System.out.println(); // Pula linha
+        }
+    }
+}
